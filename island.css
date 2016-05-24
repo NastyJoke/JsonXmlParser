@@ -25,12 +25,12 @@ array
 	border-radius:5px;
 }
 
-array[id=from_server]
+array[id=from_client]
 {
 	background-color:#CCCCCC;
 }
 
-array[id=from_client]
+array[id=from_server]
 {
 	background-color:#EEEEEE;
 }
@@ -48,7 +48,6 @@ array[id=init]:before
 	text-align:center;
 	padding-bottom:10px;
 }
-
 
 heading
 {
@@ -86,19 +85,36 @@ men:after
 
 contracts
 {
-	display:block;
 	font-weight:bold;
 }
 contracts:before
 {
-	content:"Contracts:"
+	content:"Contracts:";
 	display:block;
 	font-weight:normal;
 }
 contracts:after
 {
+	display:block;
+	margin-top:10px;
+	font-weight:normal;
+}
+
+contract
+{
+	font-weight:bold;
+}
+contract:before
+{
 	content:"";
 	display:block;
+	font-weight:normal;
+}
+contract:after
+{
+	display:block;
+	margin-top:10px;
+	font-weight:normal;
 }
 
 budget
@@ -272,51 +288,51 @@ status:after
 	margin-top:10px;
 }
 
-resources>amount
+explored_resources>resources>amount
 {
 	font-weight:bold;
 }
-resources>amount:before
+explored_resources>resources>amount:before
 {
 	content:"Resource amount:";
 	display:block;
 	font-weight:normal;
 }
-resources>amount:after
+explored_resources>resources>amount:after
 {
 	content:"";
 	display:block;
 	margin-top:10px;
 }
 
-resource
+explored_resources>resources>resource
 {
 	font-weight:bold;
 }
-resource:before
+explored_resources>resources>resource:before
 {
 	content:"Resource type:";
 	display:block;
 	font-weight:normal;
 }
-resource:after
+explored_resources>resources>resource:after
 {
 	content:"";
 	display:block;
 	margin-top:10px;
 }
 
-cond
+explored_resources>resources>cond
 {
 	font-weight:bold;
 }
-cond:before
+explored_resources>resources>cond:before
 {
 	content:"Resource condition:";
 	display:block;
 	font-weight:normal;
 }
-cond:after
+explored_resources>resources>cond:after
 {
 	content:"";
 	display:block;
@@ -374,17 +390,17 @@ id:after
 	margin-top:10px;
 }
 
-amount
+explored_resources>amount
 {
 	font-weight:bold;
 }
-amount:before
+explored_resources>amount:before
 {
 	content:"Amount:";
 	display:block;
 	font-weight:normal;
 }
-amount:after
+explored_resources>amount:after
 {
 	content:"";
 	display:block;
@@ -402,6 +418,23 @@ biomes:before
 	font-weight:normal;
 }
 biomes:after
+{
+	content:"";
+	display:block;
+	margin-top:10px;
+}
+
+explored_resources
+{
+	font-weight:bold;
+}
+explored_resources:before
+{
+	content:"Found resources:";
+	display:block;
+	font-weight:normal;
+}
+explored_resources:after
 {
 	content:"";
 	display:block;
