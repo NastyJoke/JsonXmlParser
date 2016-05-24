@@ -64,6 +64,10 @@ public class XmlGenerator {
         xml = xml.replaceFirst("<array>", "<array id=\"init\">");
         xml = xml.replaceAll("<array><data><cost>", "<array id=\"from_server\"><data><cost>");
         xml = xml.replaceAll("<array><data><action>", "<array id=\"from_client\"><data><action>");
+        xml = xml.replaceAll("<extras><resources>", "<extras><explored_resources><resources>");
+        xml = xml.replaceAll("</resources></extras>", "</resources></explored_resources></extras>");
+
+        xml = xml.replaceAll("</resources><pois>", "</resources></explored_resources><pois>");
 
         xml = xml.replaceAll(">",">\n");
     }

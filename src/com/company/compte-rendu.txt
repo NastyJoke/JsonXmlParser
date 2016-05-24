@@ -6,3 +6,5 @@ JSON charactère par charactère et, à l'aide d'une pile, générer l'arbre XML
 très compliqué à réaliser dans les temps et surtout à debeuguer, et nous avons donc choisi de faire parser le JSON par
 la bibliothèque org.JSON. Nous avons ensuite rangé toute nos balises contract de l'initialiosation dans une des balises
 plus générales, pour notament simplifier la css. Nous avons aussi signalé le premier block comme étant l'initialisation.
+Ensuite nous avons ensuite distingués sur l'arborescence les blocs sercer des blocs clients, puis ajouté un balise
+autour des resources renvoyées lors de l'exploration, pour une navigation plus facile de celles-ci.
