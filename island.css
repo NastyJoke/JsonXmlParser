@@ -1,0 +1,398 @@
+log
+{
+	font-size:20px;
+	font-family:"Calibri";
+	margin-top:10px;
+}
+log:before
+{
+	content:"Island log:";
+	font-weight:bold;
+	font-size:30px;
+	display:block;
+	text-align:center;
+	margin-bottom:10px;
+}
+
+array
+{
+	display:block;
+	margin-left:auto;
+	margin-right:auto;
+	width:15%;
+	background-color:#EEEEEE;
+	text-align:center;
+	margin-bottom:10px;
+	border-radius:5px;
+}
+
+
+heading
+{
+	font-weight:bold;
+}
+heading:before
+{
+	content:"Heading:";
+	display:block;
+	font-weight:normal;
+}
+heading:after
+{
+	content:"";
+	display:block;
+	margin-top:10px;
+}
+
+men
+{
+	font-weight:bold;
+}
+men:before
+{
+	content:"Men:";
+	display:block;
+	font-weight:normal;
+}
+men:after
+{
+	content:"Contracts:";
+	display:block;
+	margin-top:10px;
+	font-weight:normal;
+}
+
+contracts
+{
+	display:block;
+	font-weight:bold;
+}
+contracts:after
+{
+	content:"";
+	display:block;
+}
+
+budget
+{
+	font-weight:bold;
+}
+budget:before
+{
+	margin-top:10px;
+	content:"Budget:";
+	display:block;
+	font-weight:normal;
+}
+budget:after
+{
+	content:"";
+	display:block;
+	margin-top:10px;
+}
+
+part
+{
+	font-weight:bold;
+}
+part:before
+{
+	content:"Part:";
+	display:block;
+	font-weight:normal;
+}
+part:after
+{
+	content:"";
+	display:block;
+	margin-top:10px;
+}
+
+time
+{
+	font-weight:bold;
+}
+time:before
+{
+	content:"Time:";
+	display:block;
+	font-weight:normal;
+}
+time:after
+{
+	content:"";
+	display:block;
+	margin-top:10px;
+}
+
+action
+{
+	font-weight:bold;
+}
+action:before
+{
+	content:"Action:";
+	display:block;
+	font-weight:normal;
+}
+action:after
+{
+	content:"";
+	display:block;
+	margin-top:10px;
+}
+
+message
+{
+	font-weight:bold;
+}
+message:before
+{
+	content:"Message:";
+	display:block;
+	font-weight:normal;
+}
+message:after
+{
+	content:"";
+	display:block;
+	margin-top:10px;
+}
+
+direction
+{
+	font-weight:bold;
+}
+direction:before
+{
+	content:"Direction:";
+	display:block;
+	font-weight:normal;
+}
+direction:after
+{
+	content:"";
+	display:block;
+	margin-top:10px;
+}
+
+cost
+{
+	font-weight:bold;
+}
+cost:before
+{
+	content:"Cost:";
+	display:block;
+	font-weight:normal;
+}
+cost:after
+{
+	content:"";
+	display:block;
+	margin-top:10px;
+}
+
+found
+{
+	font-weight:bold;
+}
+found:before
+{
+	content:"Found:";
+	display:block;
+	font-weight:normal;
+}
+found:after
+{
+	content:"";
+	display:block;
+	margin-top:10px;
+}
+
+range
+{
+	font-weight:bold;
+}
+range:before
+{
+	content:"Range:";
+	display:block;
+	font-weight:normal;
+}
+range:after
+{
+	content:"";
+	display:block;
+	margin-top:10px;
+}
+
+status
+{
+	font-weight:bold;
+}
+status:before
+{
+	content:"Status:";
+	display:block;
+	font-weight:normal;
+}
+status:after
+{
+	content:"";
+	display:block;
+	margin-top:10px;
+}
+
+resources>amount
+{
+	font-weight:bold;
+}
+resources>amount:before
+{
+	content:"Resource amount:";
+	display:block;
+	font-weight:normal;
+}
+resources>amount:after
+{
+	content:"";
+	display:block;
+	margin-top:10px;
+}
+
+resource
+{
+	font-weight:bold;
+}
+resource:before
+{
+	content:"Resource type:";
+	display:block;
+	font-weight:normal;
+}
+resource:after
+{
+	content:"";
+	display:block;
+	margin-top:10px;
+}
+
+cond
+{
+	font-weight:bold;
+}
+cond:before
+{
+	content:"Resource condition:";
+	display:block;
+	font-weight:normal;
+}
+cond:after
+{
+	content:"";
+	display:block;
+	margin-top:30px;
+}
+
+pois
+{
+	font-weight:bold;
+}
+pois:before
+{
+	content:"Points of interest:";
+	display:block;
+	font-weight:normal;
+}
+pois:after
+{
+	content:"";
+	display:block;
+	margin-top:10px;
+}
+
+kind
+{
+	font-weight:bold;
+}
+kind:before
+{
+	content:"Kind:";
+	display:block;
+	font-weight:normal;
+}
+kind:after
+{
+	content:"";
+	display:block;
+	margin-top:10px;
+}
+
+id
+{
+	font-weight:bold;
+}
+id:before
+{
+	content:"Id:";
+	display:block;
+	font-weight:normal;
+}
+id:after
+{
+	content:"";
+	display:block;
+	margin-top:10px;
+}
+
+amount
+{
+	font-weight:bold;
+}
+amount:before
+{
+	content:"Amount:";
+	display:block;
+	font-weight:normal;
+}
+amount:after
+{
+	content:"";
+	display:block;
+	margin-top:10px;
+}
+
+biomes
+{
+	font-weight:bold;
+}
+biomes:before
+{
+	content:"Found biomes:";
+	display:block;
+	font-weight:normal;
+}
+biomes:after
+{
+	content:"";
+	display:block;
+	margin-top:10px;
+}
+
+
+array>*
+{
+	display:block;
+}
+
+data>*
+{
+	display:inline;
+}
+
+
+meth
+{
+	display:none;
+}
