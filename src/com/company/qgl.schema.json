@@ -1,0 +1,43 @@
+{"$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "array",
+  "items": {
+    "type": "object",
+    "properties": {
+      "data": {
+        "type": "object",
+        "properties": {
+          "cost": {
+            "type": "integer"
+          },
+          "extras": {
+            "type": "object",
+            "properties": {}
+          },
+          "status": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "cost",
+          "extras",
+          "status"
+        ]
+      },
+      "part": {
+        "type": "string"
+      },
+      "time": {
+        "type": "integer"
+      },
+      "meth": {
+        "type": "string"
+      }
+    },
+    "required": [
+      "data",
+      "part",
+      "time",
+      "meth"
+    ]
+  }
+}
