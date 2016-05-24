@@ -1,0 +1,8 @@
+Compte Rendu du TD JSON Schema en LangWeb
+par Costa & Lafaurie
+
+Pour la modélisation du XML, nous avions tout d'abord choisi une approche un peu "brutale", consistant à lire le fichier
+JSON charactère par charactère et, à l'aide d'une pile, générer l'arbre XML résultant. Cette méthode c'est avérée
+très compliqué à réaliser dans les temps et surtout à debeuguer, et nous avons donc choisi de faire parser le JSON par
+la bibliothèque org.JSON. Nous avons ensuite rangé toute nos balises contract de l'initialiosation dans une des balises
+plus générales, pour notament simplifier la css. Nous avons aussi signalé le premier block comme étant l'initialisation.
