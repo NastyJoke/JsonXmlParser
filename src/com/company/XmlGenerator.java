@@ -54,7 +54,7 @@ public class XmlGenerator {
 
     private static void editXML(JSONArray json) throws  JSONException{
         xml = XML.toString(json);
-        String log = "<?xml-stylesheet type=\"text/css\" href=\"island.css\" ?>\n<log>\n";
+        String log = "<?xml version=\"1.0\" encoding=\"UTF-8\"?><?xml-stylesheet type=\"text/css\" href=\"../../../island.css\" ?><log>";
         xml = log.concat(xml);
         log = "</log>";
         xml = xml.concat(log);
@@ -65,10 +65,19 @@ public class XmlGenerator {
         xml = xml.replaceAll("<array><data><cost>", "<array id=\"from_server\"><data><cost>");
         xml = xml.replaceAll("<array><data><action>", "<array id=\"from_client\"><data><action>");
         xml = xml.replaceAll("<extras><resources>", "<extras><explored_resources><resources>");
+        xml = xml.replaceAll("</altitude><resources>", "</altitude><explored_resources><resources>");
         xml = xml.replaceAll("</resources></extras>", "</resources></explored_resources></extras>");
-
         xml = xml.replaceAll("</resources><pois>", "</resources></explored_resources><pois>");
-
+        String biomes = "<biomes>";
+        int i = 0;
+        while(xml.contains(biomes)){
+            xml = xml.replaceFirst("<biomes>", "<biome>");
+            xml = xml.replaceFirst("</biomes>", "</biome>");
+            System.out.println(i++);
+            xml = xml.replaceFirst("<extras><biome>", "<extras><found_biomes><biome>");
+            xml = xml.replaceFirst("</biome></extras>", "</biome></found_biomes></extras>");
+        }
+        xml = xml.replaceAll("</creeks><biome>","</creeks><found_biomes><biome>" );
         xml = xml.replaceAll(">",">\n");
     }
 }
