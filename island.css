@@ -307,6 +307,23 @@ explored_resources>resources
     display:block;
 }
 
+status
+{
+	font-weight:bold;
+}
+status:before
+{
+	content:"Found biomes:";
+	display:block;
+	font-weight:normal;
+}
+status:after
+{
+	content:"";
+	display:block;
+	margin-top:10px;
+}
+
 pois
 {
 	font-weight:bold;
@@ -375,21 +392,26 @@ explored_resources>amount:after
 	margin-top:10px;
 }
 
-biomes
+found_biomes
 {
 	font-weight:bold;
 }
-biomes:before
+found_biomes:before
 {
 	content:"Found biomes:";
 	display:block;
 	font-weight:normal;
 }
-biomes:after
+found_biomes:after
 {
 	content:"";
 	display:block;
 	margin-top:10px;
+}
+
+found_biomes>biome
+{
+    display:block;
 }
 
 explored_resources
