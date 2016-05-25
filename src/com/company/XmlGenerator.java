@@ -1,4 +1,5 @@
 package com.company;
+import jdk.nashorn.internal.runtime.regexp.joni.Regex;
 import org.json.*;
 
 import java.io.FileNotFoundException;
@@ -13,6 +14,7 @@ import java.nio.file.Paths;
  */
 public class XmlGenerator {
     private static String xml;
+    private static String[] resources = {"FISH", "FLOWER", "FRUITS", "FUR", "ORE", "QUARTZ", "SUGAR_CANE", "WOOD"};
     private static String inputPath = "C:\\Users\\user\\Documents\\Cours\\JsonXmlParser\\src\\com\\company\\log.json";
     private static String outputPath = "C:\\Users\\user\\Documents\\Cours\\JsonXmlParser\\src\\com\\company\\output.xml";
 
@@ -77,7 +79,12 @@ public class XmlGenerator {
             xml = xml.replaceFirst("<extras><biome>", "<extras><found_biomes><biome>");
             xml = xml.replaceFirst("</biome></extras>", "</biome></found_biomes></extras>");
         }
-        xml = xml.replaceAll("</creeks><biome>","</creeks><found_biomes><biome>" );
+        xml = xml.replaceAll("</creeks><biome>","</creeks><found_biomes><biome>");
+        xml = xml.replaceAll("transform</action><parameters>", "transform</action><parameters><craft_resources>");
+        for (String res: resources) {
+            xml = xml.replaceAll("</"+res+"></parameters>", "</"+res+"></craft_resources></parameters>");
+        }
+
         xml = xml.replaceAll(">",">\n");
     }
 }

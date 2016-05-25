@@ -9,3 +9,5 @@ plus générales, pour notament simplifier la css. Nous avons aussi signalé le 
 Ensuite nous avons ensuite distingués sur l'arborescence les blocs sercer des blocs clients, puis ajouté un balise
 autour des resources renvoyées lors de l'exploration, pour une navigation plus facile de celles-ci. Similairement, nous
 avons aussi choisi d'ajouter un tag <found_biomes> autour des différents biomes trouvé lors des actions scans effectués.
+Enfin, afin de pouvoir retrouver plus simplement les fruits de transformations effectuées par le bot, nous avons aussi
+créée une balise pour encadrer les resources utilisées.
