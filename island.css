@@ -3,6 +3,9 @@ log
 	font-size:20px;
 	font-family:"Calibri";
 	margin-top:10px;
+	width:30%;
+	margin-right:auto;
+	margin-left:auto;
 }
 log:before
 {
@@ -19,25 +22,36 @@ array
 	display:block;
 	margin-left:auto;
 	margin-right:auto;
-	width:15%;
 	text-align:center;
 	margin-bottom:10px;
-	border-radius:5px;
+	border-radius:40px;
+	width:55%;
 }
 
 array[id=from_client]
 {
-	background-color:#CCCCCC;
+	background-color:#04B431;
+	margin-right:0px;
+	margin-left:auto;
 }
 
 array[id=from_server]
 {
-	background-color:#EEEEEE;
+	background-color:#E6E6E6;
+	margin-right:auto;
+	margin-left:0px;
+}
+array[id=from_server]:after
+{
+    content:"";
+    display:block;
+    margin-bottom:50px;
 }
 
 array[id=init]
 {
 	background-color:#EEEFFF;
+	width:100%;
 }
 array[id=init]:before
 {
@@ -288,55 +302,9 @@ status:after
 	margin-top:10px;
 }
 
-explored_resources>resources>amount
+explored_resources>resources
 {
-	font-weight:bold;
-}
-explored_resources>resources>amount:before
-{
-	content:"Resource amount:";
-	display:block;
-	font-weight:normal;
-}
-explored_resources>resources>amount:after
-{
-	content:"";
-	display:block;
-	margin-top:10px;
-}
-
-explored_resources>resources>resource
-{
-	font-weight:bold;
-}
-explored_resources>resources>resource:before
-{
-	content:"Resource type:";
-	display:block;
-	font-weight:normal;
-}
-explored_resources>resources>resource:after
-{
-	content:"";
-	display:block;
-	margin-top:10px;
-}
-
-explored_resources>resources>cond
-{
-	font-weight:bold;
-}
-explored_resources>resources>cond:before
-{
-	content:"Resource condition:";
-	display:block;
-	font-weight:normal;
-}
-explored_resources>resources>cond:after
-{
-	content:"";
-	display:block;
-	margin-top:30px;
+    display:block;
 }
 
 pois
@@ -454,6 +422,31 @@ data>*
 
 
 meth
+{
+	display:none;
+}
+
+message
+{
+	display:none;
+}
+
+part
+{
+	display:none;
+}
+
+status
+{
+	display:none;
+}
+
+time
+{
+	display:none;
+}
+
+ex
 {
 	display:none;
 }
