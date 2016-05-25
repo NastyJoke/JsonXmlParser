@@ -251,6 +251,23 @@ cost:after
 	margin-top:10px;
 }
 
+resource
+{
+	font-weight:bold;
+}
+resource:before
+{
+	content:"Resource:";
+	display:block;
+	font-weight:normal;
+}
+resource:after
+{
+	content:"";
+	display:block;
+	margin-top:10px;
+}
+
 found
 {
 	font-weight:bold;
@@ -392,6 +409,23 @@ explored_resources>amount:after
 	margin-top:10px;
 }
 
+extras>amount
+{
+	font-weight:bold;
+}
+extras>amount:before
+{
+	content:"Amount:";
+	display:block;
+	font-weight:normal;
+}
+extras>amount:after
+{
+	content:"";
+	display:block;
+	margin-top:10px;
+}
+
 found_biomes
 {
 	font-weight:bold;
@@ -430,6 +464,60 @@ explored_resources:after
 	display:block;
 	margin-top:10px;
 }
+
+production
+{
+	font-weight:bold;
+}
+production:before
+{
+	content:"Production:";
+	display:block;
+	font-weight:normal;
+}
+production:after
+{
+	content:"";
+	display:block;
+	margin-top:10px;
+}
+
+FUR
+{
+	font-weight:bold;
+}
+FUR:before
+{
+	content:"FUR:";
+	display:block;
+	font-weight:normal;
+}
+FUR:after
+{
+	content:"";
+	display:block;
+	margin-top:10px;
+}
+
+WOOD
+{
+	font-weight:bold;
+}
+WOOD:before
+{
+	content:"WOOD:";
+	display:block;
+	font-weight:normal;
+}
+WOOD:after
+{
+	content:"";
+	display:block;
+	margin-top:10px;
+}
+
+
+
 
 
 array>*
