@@ -3,6 +3,9 @@ log
 	font-size:20px;
 	font-family:"Calibri";
 	margin-top:10px;
+	width:30%;
+	margin-right:auto;
+	margin-left:auto;
 }
 log:before
 {
@@ -19,25 +22,36 @@ array
 	display:block;
 	margin-left:auto;
 	margin-right:auto;
-	width:15%;
 	text-align:center;
 	margin-bottom:10px;
-	border-radius:5px;
+	border-radius:40px;
+	width:55%;
 }
 
 array[id=from_client]
 {
-	background-color:#CCCCCC;
+	background-color:#04B431;
+	margin-right:0px;
+	margin-left:auto;
 }
 
 array[id=from_server]
 {
-	background-color:#EEEEEE;
+	background-color:#E6E6E6;
+	margin-right:auto;
+	margin-left:0px;
+}
+array[id=from_server]:after
+{
+    content:"";
+    display:block;
+    margin-bottom:50px;
 }
 
 array[id=init]
 {
 	background-color:#EEEFFF;
+	width:100%;
 }
 array[id=init]:before
 {
@@ -237,6 +251,23 @@ cost:after
 	margin-top:10px;
 }
 
+resource
+{
+	font-weight:bold;
+}
+resource:before
+{
+	content:"Resource:";
+	display:block;
+	font-weight:normal;
+}
+resource:after
+{
+	content:"";
+	display:block;
+	margin-top:10px;
+}
+
 found
 {
 	font-weight:bold;
@@ -288,55 +319,26 @@ status:after
 	margin-top:10px;
 }
 
-explored_resources>resources>amount
+explored_resources>resources
+{
+    display:block;
+}
+
+status
 {
 	font-weight:bold;
 }
-explored_resources>resources>amount:before
+status:before
 {
-	content:"Resource amount:";
+	content:"Found biomes:";
 	display:block;
 	font-weight:normal;
 }
-explored_resources>resources>amount:after
+status:after
 {
 	content:"";
 	display:block;
 	margin-top:10px;
-}
-
-explored_resources>resources>resource
-{
-	font-weight:bold;
-}
-explored_resources>resources>resource:before
-{
-	content:"Resource type:";
-	display:block;
-	font-weight:normal;
-}
-explored_resources>resources>resource:after
-{
-	content:"";
-	display:block;
-	margin-top:10px;
-}
-
-explored_resources>resources>cond
-{
-	font-weight:bold;
-}
-explored_resources>resources>cond:before
-{
-	content:"Resource condition:";
-	display:block;
-	font-weight:normal;
-}
-explored_resources>resources>cond:after
-{
-	content:"";
-	display:block;
-	margin-top:30px;
 }
 
 pois
@@ -407,21 +409,43 @@ explored_resources>amount:after
 	margin-top:10px;
 }
 
-biomes
+extras>amount
 {
 	font-weight:bold;
 }
-biomes:before
+extras>amount:before
+{
+	content:"Amount:";
+	display:block;
+	font-weight:normal;
+}
+extras>amount:after
+{
+	content:"";
+	display:block;
+	margin-top:10px;
+}
+
+found_biomes
+{
+	font-weight:bold;
+}
+found_biomes:before
 {
 	content:"Found biomes:";
 	display:block;
 	font-weight:normal;
 }
-biomes:after
+found_biomes:after
 {
 	content:"";
 	display:block;
 	margin-top:10px;
+}
+
+found_biomes>biome
+{
+    display:block;
 }
 
 explored_resources
@@ -441,6 +465,60 @@ explored_resources:after
 	margin-top:10px;
 }
 
+production
+{
+	font-weight:bold;
+}
+production:before
+{
+	content:"Production:";
+	display:block;
+	font-weight:normal;
+}
+production:after
+{
+	content:"";
+	display:block;
+	margin-top:10px;
+}
+
+FUR
+{
+	font-weight:bold;
+}
+FUR:before
+{
+	content:"FUR:";
+	display:block;
+	font-weight:normal;
+}
+FUR:after
+{
+	content:"";
+	display:block;
+	margin-top:10px;
+}
+
+WOOD
+{
+	font-weight:bold;
+}
+WOOD:before
+{
+	content:"WOOD:";
+	display:block;
+	font-weight:normal;
+}
+WOOD:after
+{
+	content:"";
+	display:block;
+	margin-top:10px;
+}
+
+
+
+
 
 array>*
 {
@@ -454,6 +532,31 @@ data>*
 
 
 meth
+{
+	display:none;
+}
+
+message
+{
+	display:none;
+}
+
+part
+{
+	display:none;
+}
+
+status
+{
+	display:none;
+}
+
+time
+{
+	display:none;
+}
+
+ex
 {
 	display:none;
 }
