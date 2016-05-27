@@ -131,6 +131,26 @@ public class XmlGenerator {
     }
 
 
+    public static double[] paInfo()
+    {
+        int budget = Integer.parseInt(xml.substring(xml.indexOf("<budget>")+8,xml.indexOf("</budget>")));
+        int costSum = 0;
+        int nbActions = 0;
+        int cost;
+        int offset = 0;
+        while (xml.indexOf("<cost>",offset) != -1)
+        {
+            nbActions++;
+            offset = xml.indexOf("<cost>",offset)+6;
+            cost = Integer.parseInt(xml.substring(offset,xml.indexOf("</cost>",offset)));
+            budget -= cost;
+            costSum += cost;
+        }
+        double average = costSum/nbActions;
+        return new double[] {budget,average};
+    }
+
+
     public static void main(String args[]){
 
 
