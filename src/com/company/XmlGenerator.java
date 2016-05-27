@@ -46,21 +46,24 @@ public class XmlGenerator {
             }
             else {
                 flag = false;
-                if(balisesMap.containsKey(balises)) {
-                    balisesMap.put(balises, balisesMap.get(balises) + 1);
-                }
-                else{
-                    balisesMap.put(balises, 1);
+                if(!balises.equals("")) {
+                    if (balisesMap.containsKey(balises)) {
+                        balisesMap.put(balises, balisesMap.get(balises) + 1);
+                    } else {
+                        balisesMap.put(balises, 1);
+                    }
                     balises = "";
                 }
             }
-
-
-            System.out.println(balises+ " ET LE CURRENT : "+xml.charAt(i) + " ET LE FLAG : "+ !flag + " ET BALISE VIDE : " + !balises.equals(""));
         }
+        String statXml = "<statistiques>";
+        int incr = 0;
         for (String str: balisesMap.keySet()) {
-            System.out.println("<"+str+"> : "+balisesMap.get(str));
+            statXml+=("<"+str+"> : "+balisesMap.get(str)+"</"+str+">");
+            incr+=balisesMap.get(str);
         }
+
+        statXml += "</statistiques>";
 
 
 
