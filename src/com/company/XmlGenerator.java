@@ -8,6 +8,8 @@ import java.io.PrintWriter;
 import java.io.UnsupportedEncodingException;
 import java.nio.file.Files;
 import java.nio.file.Paths;
+import java.util.HashMap;
+import java.util.Map;
 
 /**
  * Created by Renaud on 12/05/2016.
@@ -17,6 +19,8 @@ public class XmlGenerator {
     private static String[] resources = {"FISH", "FLOWER", "FRUITS", "FUR", "ORE", "QUARTZ", "SUGAR_CANE", "WOOD"};
     private static String inputPath = "C:\\Users\\user\\Documents\\Cours\\JsonXmlParser\\src\\com\\company\\log.json";
     private static String outputPath = "C:\\Users\\user\\Documents\\Cours\\JsonXmlParser\\src\\com\\company\\output.xml";
+    private static Map<String, Integer> balisesMap = new HashMap<>();
+
 
     private static String readFile(String path)
             throws IOException
@@ -31,6 +35,74 @@ public class XmlGenerator {
         writer.close();
     }
 
+    private static void statistiques(){
+        String balises = "";
+        boolean flag = false;
+        for (int i = 0; i < xml.length(); i++) {
+            if(flag && xml.charAt(i) != '>' && xml.charAt(i) != '/' && xml.charAt(i)!='<')
+                balises += xml.charAt(i);
+            else if(xml.charAt(i)=='<') {
+                flag = true;
+            }
+            else {
+                flag = false;
+                if(balisesMap.containsKey(balises)) {
+                    balisesMap.put(balises, balisesMap.get(balises) + 1);
+                }
+                else{
+                    balisesMap.put(balises, 1);
+                    balises = "";
+                }
+            }
+
+
+            System.out.println(balises+ " ET LE CURRENT : "+xml.charAt(i) + " ET LE FLAG : "+ !flag + " ET BALISE VIDE : " + !balises.equals(""));
+        }
+        for (String str: balisesMap.keySet()) {
+            System.out.println("<"+str+"> : "+balisesMap.get(str));
+        }
+
+
+
+    }
+    private static void editXML(JSONArray json) throws  JSONException{
+        xml = XML.toString(json);
+
+
+        xml = xml.replaceAll("contracts", "contract");
+        xml = xml.replaceAll("(<contract>.*</contract>)", "<contracts>$1</contracts>");
+        xml = xml.replaceFirst("<array>", "<array id=\"init\">");
+        xml = xml.replaceAll("<array><data><cost>", "<array id=\"from_server\"><data><cost>");
+        xml = xml.replaceAll("<array><data><action>", "<array id=\"from_client\"><data><action>");
+        xml = xml.replaceAll("<extras><resources>", "<extras><explored_resources><resources>");
+        xml = xml.replaceAll("</altitude><resources>", "</altitude><explored_resources><resources>");
+        xml = xml.replaceAll("</resources></extras>", "</resources></explored_resources></extras>");
+        xml = xml.replaceAll("</resources><pois>", "</resources></explored_resources><pois>");
+        String biomes = "<biomes>";
+        int i = 0;
+        System.out.print("Counting biomes");
+        while(xml.contains(biomes)){
+            xml = xml.replaceFirst("<biomes>", "<biome>");
+            xml = xml.replaceFirst("</biomes>", "</biome>");
+            xml = xml.replaceFirst("<extras><biome>", "<extras><found_biomes><biome>");
+            xml = xml.replaceFirst("</biome></extras>", "</biome></found_biomes></extras>");
+        }
+        System.out.println("Done!");
+        xml = xml.replaceAll("</creeks><biome>","</creeks><found_biomes><biome>");
+        xml = xml.replaceAll("transform</action><parameters>", "transform</action><parameters><craft_resources>");
+        for (String res: resources) {
+            xml = xml.replaceAll("</"+res+"></parameters>", "</"+res+"></craft_resources></parameters>");
+        }
+
+    }
+    private static void finalTouch(){
+        String log = "<?xml version=\"1.0\" encoding=\"UTF-8\"?><?xml-stylesheet type=\"text/css\" href=\"../../../island.css\" ?><log>";
+        xml = log.concat(xml);
+        log = "</log>";
+        xml = xml.concat(log);
+        xml = xml.replaceAll(">",">\n");
+    }
+
 
     public static void main(String args[]){
 
@@ -40,6 +112,8 @@ public class XmlGenerator {
             JSONArray json = new JSONArray(readFile(inputPath));
 
             editXML(json);
+            statistiques();
+            finalTouch();
             saveToXml();
 
         } catch (FileNotFoundException e) {
@@ -54,37 +128,5 @@ public class XmlGenerator {
 
     }
 
-    private static void editXML(JSONArray json) throws  JSONException{
-        xml = XML.toString(json);
-        String log = "<?xml version=\"1.0\" encoding=\"UTF-8\"?><?xml-stylesheet type=\"text/css\" href=\"../../../island.css\" ?><log>";
-        xml = log.concat(xml);
-        log = "</log>";
-        xml = xml.concat(log);
 
-        xml = xml.replaceAll("contracts", "contract");
-        xml = xml.replaceAll("(<contract>.*</contract>)", "<contracts>$1</contracts>");
-        xml = xml.replaceFirst("<array>", "<array id=\"init\">");
-        xml = xml.replaceAll("<array><data><cost>", "<array id=\"from_server\"><data><cost>");
-        xml = xml.replaceAll("<array><data><action>", "<array id=\"from_client\"><data><action>");
-        xml = xml.replaceAll("<extras><resources>", "<extras><explored_resources><resources>");
-        xml = xml.replaceAll("</altitude><resources>", "</altitude><explored_resources><resources>");
-        xml = xml.replaceAll("</resources></extras>", "</resources></explored_resources></extras>");
-        xml = xml.replaceAll("</resources><pois>", "</resources></explored_resources><pois>");
-        String biomes = "<biomes>";
-        int i = 0;
-        while(xml.contains(biomes)){
-            xml = xml.replaceFirst("<biomes>", "<biome>");
-            xml = xml.replaceFirst("</biomes>", "</biome>");
-            System.out.println(i++);
-            xml = xml.replaceFirst("<extras><biome>", "<extras><found_biomes><biome>");
-            xml = xml.replaceFirst("</biome></extras>", "</biome></found_biomes></extras>");
-        }
-        xml = xml.replaceAll("</creeks><biome>","</creeks><found_biomes><biome>");
-        xml = xml.replaceAll("transform</action><parameters>", "transform</action><parameters><craft_resources>");
-        for (String res: resources) {
-            xml = xml.replaceAll("</"+res+"></parameters>", "</"+res+"></craft_resources></parameters>");
-        }
-
-        xml = xml.replaceAll(">",">\n");
-    }
 }
