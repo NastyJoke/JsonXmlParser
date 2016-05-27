@@ -4,6 +4,7 @@
 <statistiques>
 <stat>
 Statistiques</stat>
+<liste>
 <altitude>
 39</altitude>
 <FRUITS>
@@ -78,10 +79,15 @@ Statistiques</stat>
 3019</status>
 <craft_resources>
 2</craft_resources>
+</liste>
 <total>
 Nombre total de balises : 47997</total>
 <distance>
  Distance Parcourue : 3712</distance>
+<restant>
+3964.0</restant>
+<cout_moyen>
+5.0</cout_moyen>
 </statistiques>
 <array id="init">
 <data>

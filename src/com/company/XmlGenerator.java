@@ -56,7 +56,7 @@ public class XmlGenerator {
                 }
             }
         }
-        String statXml = "<statistiques><stat>Statistiques</stat>";
+        String statXml = "<statistiques><stat>Statistiques</stat><liste>";
         int incr = 0;
         for (String str: balisesMap.keySet()) {
             if(str.contains("array"))
@@ -66,8 +66,10 @@ public class XmlGenerator {
 
             incr+=balisesMap.get(str);
         }
-        statXml+="<total>Nombre total de balises : "+incr+"</total>";
+        statXml+="</liste><total>Nombre total de balises : "+incr+"</total>";
         statXml+=distance();
+        double tab[] = paInfo();
+        statXml+="<restant>"+tab[0]+"</restant><cout_moyen>"+tab[1]+"</cout_moyen>";
         statXml += "</statistiques>";
         xml = statXml.concat(xml);
     }
