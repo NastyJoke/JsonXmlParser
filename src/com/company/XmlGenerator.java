@@ -17,8 +17,8 @@ import java.util.Map;
 public class XmlGenerator {
     private static String xml;
     private static String[] resources = {"FISH", "FLOWER", "FRUITS", "FUR", "ORE", "QUARTZ", "SUGAR_CANE", "WOOD"};
-    private static String inputPath = "C:\\Users\\user\\Documents\\Cours\\JsonXmlParser\\src\\com\\company\\log.json";
-    private static String outputPath = "C:\\Users\\user\\Documents\\Cours\\JsonXmlParser\\src\\com\\company\\output.xml";
+    private static String inputPath = "D:\\Polytech\\web\\JsonXmlParser\\src\\com\\company\\log.json";
+    private static String outputPath = "D:\\Polytech\\web\\JsonXmlParser\\src\\com\\company\\output.xml";
     private static Map<String, Integer> balisesMap = new HashMap<>();
 
 
@@ -69,7 +69,7 @@ public class XmlGenerator {
         statXml+="</liste><total>Nombre total de balises : "+incr+"</total>";
         statXml+=distance();
         double tab[] = paInfo();
-        statXml+="<restant>"+tab[0]+"</restant><cout_moyen>"+tab[1]+"</cout_moyen>";
+        statXml+="<restant>Remaining AP: "+(int)tab[0]+"</restant><cout_moyen>Average cost: "+tab[1]+"</cout_moyen>";
         statXml += "</statistiques>";
         xml = statXml.concat(xml);
     }

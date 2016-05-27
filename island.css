@@ -166,6 +166,7 @@ array[id=init]:before
 	display:block;
 	text-align:center;
 	padding-bottom:10px;
+	margin-top:10px;
 }
 
 heading
@@ -857,48 +858,54 @@ report>array:after
 	margin-top:10px;
 }
 
-
-stats
+statistiques
 {
-    position:absolute;
-    float:left;
-    background-color:#CCCCCC;
+    float:center;
+    background-color:#F2F5A9;
     border-radius:40px;
     display:block;
     text-align:center;
 }
-stats:hover
+statistiques:hover
 {
+    display:block;
     cursor:crosshair;
 }
 
-stats>*
+statistiques>*
 {
     display:block;
     margin-left:20px;
     margin-right:20px;
 }
-stats>*:hover
+statistiques>*:hover
 {
     color:red;
 }
 
+total,restant,cout_moyen,distance
+{
+    font-style:italic;
+}
 
-title
+
+stat
 {
     font-weight:bold;
     text-align:center;
 }
-title:hover
+stat:hover
 {
     color:black;
 }
-title:after
+stat:after
 {
     content:"";
     margin-bottom:10px;
     display:block;
 }
+
+
 
 
 
@@ -929,6 +936,11 @@ array>*
 data>*
 {
 	display:inline;
+}
+
+liste>*
+{
+    display:none;
 }
 
 
