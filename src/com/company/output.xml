@@ -1,6 +1,88 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xml-stylesheet type="text/css" href="../../../island.css" ?>
 <log>
+<statistiques>
+<stat>
+Statistiques</stat>
+<altitude>
+39</altitude>
+<FRUITS>
+1</FRUITS>
+<data>
+6039</data>
+<production>
+2</production>
+<part>
+6039</part>
+<extras>
+3019</extras>
+<range>
+124</range>
+<contracts>
+1</contracts>
+<cond>
+337</cond>
+<array id="init">
+1</array>
+<creeks>
+4</creeks>
+<found>
+124</found>
+<creek>
+1</creek>
+<men>
+1</men>
+<action>
+3019</action>
+<explored_resources>
+325</explored_resources>
+<budget>
+1</budget>
+<direction>
+588</direction>
+<array id="from_server">
+3019</array>
+<amount>
+588</amount>
+<FUR>
+1</FUR>
+<cost>
+3019</cost>
+<heading>
+1</heading>
+<resource>
+588</resource>
+<SUGAR_CANE>
+1</SUGAR_CANE>
+<kind>
+2</kind>
+<contract>
+4</contract>
+<resources>
+391</resources>
+<people>
+1</people>
+<array id="from_client">
+3019</array>
+<found_biomes>
+784</found_biomes>
+<biome>
+977</biome>
+<time>
+6039</time>
+<parameters>
+838</parameters>
+<meth>
+6039</meth>
+<status>
+3019</status>
+<craft_resources>
+2</craft_resources>
+<total>
+Nombre total de balises : 47997</total>
+<distance>
+ Distance Parcourue : 3712</distance>
+</statistiques>
 <array id="init">
 <data>
 <heading>

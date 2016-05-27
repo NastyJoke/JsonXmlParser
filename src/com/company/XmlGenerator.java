@@ -59,18 +59,22 @@ public class XmlGenerator {
         String statXml = "<statistiques><stat>Statistiques</stat>";
         int incr = 0;
         for (String str: balisesMap.keySet()) {
-            statXml+=("<"+str+"> : "+balisesMap.get(str)+"</"+str+">");
+            if(str.contains("array"))
+                statXml+=("<"+str+">"+balisesMap.get(str)+"</array>");
+            else
+                statXml+=("<"+str+">"+balisesMap.get(str)+"</"+str+">");
+
             incr+=balisesMap.get(str);
         }
         statXml+="<total>Nombre total de balises : "+incr+"</total>";
         statXml+=distance();
         statXml += "</statistiques>";
-        statXml.concat(xml);
+        xml = statXml.concat(xml);
     }
 
     private static String distance(){
         int distance = decompte("fly", 3) + decompte("move_to");
-        String dist = "<distance> Distance Parcourue : "+ distance+"</distance";
+        String dist = "<distance> Distance Parcourue : "+ distance+"</distance>";
         return dist;
     }
 
@@ -78,7 +82,7 @@ public class XmlGenerator {
         int act = 0;
         int incr = 0;
         while(act != -1){
-            act = xml.indexOf(action,act);
+            act = xml.indexOf(action,act+1);
             incr+=val;
         }
         return incr;

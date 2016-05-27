@@ -1,33 +1,44 @@
 <!DOCTYPE log [
-        <!ELEMENT log (array)*>
-        <!ELEMENT array (data|part|time|meth)*>
+        <!ELEMENT log (statistiques|array)*>
+        <!ELEMENT statistiques (stat|altitude|FRUITS|data|production|part|extras|range|contracts|cond|array|creeks|found|creek|men|action|explored_resources|budget|direction|amount|FUR|cost|heading|resource|SUGAR_CANE|kind|contract|resources|people|found_biomes|biome|time|parameters|meth|status|craft_resources|total|distance)*>
+        <!ELEMENT stat (#PCDATA)>
+        <!ELEMENT altitude (#PCDATA)>
+        <!ELEMENT FRUITS (#PCDATA)>
         <!ELEMENT data (heading|men|contracts|budget|action|parameters|cost|extras|status)*>
-        <!ELEMENT heading (#PCDATA)>
-        <!ELEMENT men (#PCDATA)>
-        <!ELEMENT contracts (amount|resource)*>
-        <!ELEMENT amount (#PCDATA)>
-        <!ELEMENT resource (#PCDATA)>
-        <!ELEMENT budget (#PCDATA)>
+        <!ELEMENT production (#PCDATA)>
         <!ELEMENT part (#PCDATA)>
-        <!ELEMENT time (#PCDATA)>
-        <!ELEMENT meth (#PCDATA)>
-        <!ELEMENT action (#PCDATA)>
-        <!ELEMENT parameters (message|direction|creek|people|resource|ex)*>
-        <!ELEMENT message (#PCDATA)>
-        <!ELEMENT direction (#PCDATA)>
-        <!ELEMENT cost (#PCDATA)>
-        <!ELEMENT extras (found|range|biomes|creeks|resources|pois|amount)*>
-        <!ELEMENT found (#PCDATA)>
+        <!ELEMENT extras (found|range|found_biomes|creeks|explored_resources|altitude|amount|production|kind)*>
         <!ELEMENT range (#PCDATA)>
-        <!ELEMENT status (#PCDATA)>
-        <!ELEMENT biomes (#PCDATA)>
-        <!ELEMENT creeks (#PCDATA)>
-        <!ELEMENT creek (#PCDATA)>
-        <!ELEMENT people (#PCDATA)>
-        <!ELEMENT resources (amount|resource|cond)*>
+        <!ELEMENT contracts (contract)*>
         <!ELEMENT cond (#PCDATA)>
-        <!ELEMENT pois (kind|id)*>
+        <!ELEMENT array (data|part|time|meth)*>
+        <!ATTLIST array
+                id CDATA #REQUIRED>
+        <!ELEMENT creeks (#PCDATA)>
+        <!ELEMENT found (#PCDATA)>
+        <!ELEMENT creek (#PCDATA)>
+        <!ELEMENT men (#PCDATA)>
+        <!ELEMENT action (#PCDATA)>
+        <!ELEMENT explored_resources (resources)*>
+        <!ELEMENT budget (#PCDATA)>
+        <!ELEMENT direction (#PCDATA)>
+        <!ELEMENT amount (#PCDATA)>
+        <!ELEMENT FUR (#PCDATA)>
+        <!ELEMENT cost (#PCDATA)>
+        <!ELEMENT heading (#PCDATA)>
+        <!ELEMENT resource (#PCDATA)>
+        <!ELEMENT SUGAR_CANE (#PCDATA)>
         <!ELEMENT kind (#PCDATA)>
-        <!ELEMENT id (#PCDATA)>
-        <!ELEMENT ex (#PCDATA)>
+        <!ELEMENT contract (amount|resource)*>
+        <!ELEMENT resources (amount|resource|cond)*>
+        <!ELEMENT people (#PCDATA)>
+        <!ELEMENT found_biomes (biome)*>
+        <!ELEMENT biome (#PCDATA)>
+        <!ELEMENT time (#PCDATA)>
+        <!ELEMENT parameters (direction|creek|people|resource|craft_resources)*>
+        <!ELEMENT meth (#PCDATA)>
+        <!ELEMENT status (#PCDATA)>
+        <!ELEMENT craft_resources (FRUITS|SUGAR_CANE|FUR)*>
+        <!ELEMENT total (#PCDATA)>
+        <!ELEMENT distance (#PCDATA)>
         ]>
