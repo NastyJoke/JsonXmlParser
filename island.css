@@ -28,11 +28,116 @@ array
 	width:55%;
 }
 
+array:hover
+{
+    cursor:crosshair;
+}
+
+
+
+/*
+Useless but cool colors
+*/
+contracts:hover
+{
+    color:red;
+}
+heading:hover
+{
+    color:red;
+}
+men:hover
+{
+    color:red;
+}
+budget:hover
+{
+    color:red;
+}
+action:hover
+{
+    color:blue;
+}
+direction:hover
+{
+    color:blue;
+}
+cost:hover
+{
+    color:red;
+}
+found:hover
+{
+    color:red;
+}
+array[id=from_server]>data>extras>range:hover
+{
+    color:red;
+}
+found_biomes:hover
+{
+    color:red;
+}
+array[id=from_server]>data>extras>creek:hover
+{
+    color:red;
+}
+array[id=from_client]>data>parameters>creek:hover
+{
+    color:blue;
+}
+creeks:hover
+{
+    color:red;
+}
+people:hover
+{
+    color:blue;
+}
+asked_range:hover
+{
+    color:red;
+}
+report:hover
+{
+    color:red;
+}
+altitude:hover
+{
+    color:red;
+}
+explored_resources:hover
+{
+    color:red;
+}
+array[id=from_client]>data>parameters>resource:hover
+{
+    color:blue;
+}
+array[id=from_server]>data>extras>amount:hover
+{
+    color:red;
+}
+craft_resources:hover
+{
+    color:blue;
+}
+production:hover
+{
+    color:red;
+}
+kind:hover
+{
+    color:red;
+}
+
+
 array[id=from_client]
 {
 	background-color:#04B431;
 	margin-right:0px;
 	margin-left:auto;
+	color:white;
 }
 
 array[id=from_server]
@@ -746,6 +851,68 @@ report>array:before
 	font-weight:normal;
 }
 report>array:after
+{
+	content:"";
+	display:block;
+	margin-top:10px;
+}
+
+
+stats
+{
+    position:absolute;
+    float:left;
+    background-color:#CCCCCC;
+    border-radius:40px;
+    display:block;
+    text-align:center;
+}
+stats:hover
+{
+    cursor:crosshair;
+}
+
+stats>*
+{
+    display:block;
+    margin-left:20px;
+    margin-right:20px;
+}
+stats>*:hover
+{
+    color:red;
+}
+
+
+title
+{
+    font-weight:bold;
+    text-align:center;
+}
+title:hover
+{
+    color:black;
+}
+title:after
+{
+    content:"";
+    margin-bottom:10px;
+    display:block;
+}
+
+
+
+balises
+{
+    font-weight:bold;
+}
+balises:before
+{
+	content:"Balises:";
+	display:block;
+	font-weight:normal;
+}
+balises:after
 {
 	content:"";
 	display:block;
