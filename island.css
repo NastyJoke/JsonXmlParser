@@ -28,11 +28,116 @@ array
 	width:55%;
 }
 
+array:hover
+{
+    cursor:crosshair;
+}
+
+
+
+/*
+Useless but cool colors
+*/
+contracts:hover
+{
+    color:red;
+}
+heading:hover
+{
+    color:red;
+}
+men:hover
+{
+    color:red;
+}
+budget:hover
+{
+    color:red;
+}
+action:hover
+{
+    color:blue;
+}
+direction:hover
+{
+    color:blue;
+}
+cost:hover
+{
+    color:red;
+}
+found:hover
+{
+    color:red;
+}
+array[id=from_server]>data>extras>range:hover
+{
+    color:red;
+}
+found_biomes:hover
+{
+    color:red;
+}
+array[id=from_server]>data>extras>creek:hover
+{
+    color:red;
+}
+array[id=from_client]>data>parameters>creek:hover
+{
+    color:blue;
+}
+creeks:hover
+{
+    color:red;
+}
+people:hover
+{
+    color:blue;
+}
+asked_range:hover
+{
+    color:red;
+}
+report:hover
+{
+    color:red;
+}
+altitude:hover
+{
+    color:red;
+}
+explored_resources:hover
+{
+    color:red;
+}
+array[id=from_client]>data>parameters>resource:hover
+{
+    color:blue;
+}
+array[id=from_server]>data>extras>amount:hover
+{
+    color:red;
+}
+craft_resources:hover
+{
+    color:blue;
+}
+production:hover
+{
+    color:red;
+}
+kind:hover
+{
+    color:red;
+}
+
+
 array[id=from_client]
 {
 	background-color:#04B431;
 	margin-right:0px;
 	margin-left:auto;
+	color:white;
 }
 
 array[id=from_server]
@@ -251,23 +356,6 @@ cost:after
 	margin-top:10px;
 }
 
-resource
-{
-	font-weight:bold;
-}
-resource:before
-{
-	content:"Resource:";
-	display:block;
-	font-weight:normal;
-}
-resource:after
-{
-	content:"";
-	display:block;
-	margin-top:10px;
-}
-
 found
 {
 	font-weight:bold;
@@ -392,6 +480,23 @@ id:after
 	margin-top:10px;
 }
 
+altitude
+{
+	font-weight:bold;
+}
+altitude:before
+{
+	content:"Altitude:";
+	display:block;
+	font-weight:normal;
+}
+id:after
+{
+	content:"";
+	display:block;
+	margin-top:10px;
+}
+
 explored_resources>amount
 {
 	font-weight:bold;
@@ -482,9 +587,83 @@ production:after
 	margin-top:10px;
 }
 
-FUR
+craft_resources
 {
 	font-weight:bold;
+}
+craft_resources:before
+{
+	content:"Resources:";
+	display:block;
+	font-weight:normal;
+}
+craft_resources:after
+{
+	content:"";
+	display:block;
+	margin-top:10px;
+}
+
+parameters>resource>*
+{
+    font-weight:bold;
+}
+
+FISH
+{
+    font-weight:bold;
+}
+FISH:before
+{
+	content:"FISH:";
+	display:block;
+	font-weight:normal;
+}
+FISH:after
+{
+	content:"";
+	display:block;
+	margin-top:10px;
+}
+
+
+FLOWER
+{
+    font-weight:bold;
+}
+FLOWER:before
+{
+	content:"FLOWER:";
+	display:block;
+	font-weight:normal;
+}
+FLOWER:after
+{
+	content:"";
+	display:block;
+	margin-top:10px;
+}
+
+FRUITS
+{
+    font-weight:bold;
+}
+FRUITS:before
+{
+	content:"FRUITS:";
+	display:block;
+	font-weight:normal;
+}
+FRUITS:after
+{
+	content:"";
+	display:block;
+	margin-top:10px;
+}
+
+FUR
+{
+    font-weight:bold;
 }
 FUR:before
 {
@@ -499,9 +678,63 @@ FUR:after
 	margin-top:10px;
 }
 
+
+ORE
+{
+    font-weight:bold;
+}
+ORE:before
+{
+	content:"ORE:";
+	display:block;
+	font-weight:normal;
+}
+ORE:after
+{
+	content:"";
+	display:block;
+	margin-top:10px;
+}
+
+
+QWARTZ
+{
+    font-weight:bold;
+}
+QWARTZ:before
+{
+	content:"QWARTZ:";
+	display:block;
+	font-weight:normal;
+}
+QWARTZ:after
+{
+	content:"";
+	display:block;
+	margin-top:10px;
+}
+
+
+SUGAR_CANE
+{
+    font-weight:bold;
+}
+SUGAR_CANE:before
+{
+	content:"SUGAR_CANE:";
+	display:block;
+	font-weight:normal;
+}
+SUGAR_CANE:after
+{
+	content:"";
+	display:block;
+	margin-top:10px;
+}
+
 WOOD
 {
-	font-weight:bold;
+    font-weight:bold;
 }
 WOOD:before
 {
@@ -517,6 +750,174 @@ WOOD:after
 }
 
 
+
+
+creeks
+{
+    font-weight:bold;
+}
+creeks:before
+{
+	content:"Creek:";
+	display:block;
+	font-weight:normal;
+}
+creeks:after
+{
+	content:"";
+	display:block;
+	margin-top:10px;
+}
+
+
+creek
+{
+    font-weight:bold;
+}
+creek:before
+{
+	content:"Creek:";
+	display:block;
+	font-weight:normal;
+}
+creek:after
+{
+	content:"";
+	display:block;
+	margin-top:10px;
+}
+
+people
+{
+    font-weight:bold;
+}
+people:before
+{
+	content:"People:";
+	display:block;
+	font-weight:normal;
+}
+people:after
+{
+	content:"";
+	display:block;
+	margin-top:10px;
+}
+
+
+asked_range
+{
+    font-weight:bold;
+}
+asked_range:before
+{
+	content:"Asked range:";
+	display:block;
+	font-weight:normal;
+}
+asked_range:after
+{
+	content:"";
+	display:block;
+	margin-top:10px;
+}
+
+report
+{
+    font-weight:bold;
+}
+report:before
+{
+	content:"Report:";
+	display:block;
+	font-weight:normal;
+}
+report:after
+{
+	content:"";
+	display:block;
+	margin-top:10px;
+}
+
+
+report>array
+{
+    font-weight:bold;
+}
+report>array:before
+{
+	content:"";
+	display:block;
+	font-weight:normal;
+}
+report>array:after
+{
+	content:"";
+	display:block;
+	margin-top:10px;
+}
+
+
+stats
+{
+    position:absolute;
+    float:left;
+    background-color:#CCCCCC;
+    border-radius:40px;
+    display:block;
+    text-align:center;
+}
+stats:hover
+{
+    cursor:crosshair;
+}
+
+stats>*
+{
+    display:block;
+    margin-left:20px;
+    margin-right:20px;
+}
+stats>*:hover
+{
+    color:red;
+}
+
+
+title
+{
+    font-weight:bold;
+    text-align:center;
+}
+title:hover
+{
+    color:black;
+}
+title:after
+{
+    content:"";
+    margin-bottom:10px;
+    display:block;
+}
+
+
+
+balises
+{
+    font-weight:bold;
+}
+balises:before
+{
+	content:"Balises:";
+	display:block;
+	font-weight:normal;
+}
+balises:after
+{
+	content:"";
+	display:block;
+	margin-top:10px;
+}
 
 
 
