@@ -62,6 +62,7 @@ public class XmlGenerator {
             statXml+=("<"+str+"> : "+balisesMap.get(str)+"</"+str+">");
             incr+=balisesMap.get(str);
         }
+        statXml+="<total>Nombre total de balises : "+incr+"</total>";
         statXml+=distance();
         statXml += "</statistiques>";
         statXml.concat(xml);
