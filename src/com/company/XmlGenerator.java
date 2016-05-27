@@ -56,18 +56,37 @@ public class XmlGenerator {
                 }
             }
         }
-        String statXml = "<statistiques>";
+        String statXml = "<statistiques><stat>Statistiques</stat>";
         int incr = 0;
         for (String str: balisesMap.keySet()) {
             statXml+=("<"+str+"> : "+balisesMap.get(str)+"</"+str+">");
             incr+=balisesMap.get(str);
         }
-
+        statXml+=distance();
         statXml += "</statistiques>";
-
-
-
+        statXml.concat(xml);
     }
+
+    private static String distance(){
+        int distance = decompte("fly", 3) + decompte("move_to");
+        String dist = "<distance> Distance Parcourue : "+ distance+"</distance";
+        return dist;
+    }
+
+    private static int decompte(String action, int val){
+        int act = 0;
+        int incr = 0;
+        while(act != -1){
+            act = xml.indexOf(action,act);
+            incr+=val;
+        }
+        return incr;
+    }
+
+    private static int decompte(String action){
+        return decompte(action, 1);
+    }
+
     private static void editXML(JSONArray json) throws  JSONException{
         xml = XML.toString(json);
 
